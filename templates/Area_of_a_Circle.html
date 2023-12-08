@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/stylecircle.css')}}">
+  <center><title>Area of a Circle</title>
+
+
+</head>
+<body>
+  <main>
+  <div class="circle">
+    <h1>Area of a Circle</h1>
+    <div class="process">
+    <form action='/Area_of_a_Circle', method='post'>
+        <label><for="radius">Enter the radius of a Circle:</label>
+        <br>
+        <input type="number" name="radius" required>
+        <br>
+        <button type="submit">Calculate</button>
+        <br>
+    </form>
+    {% if radius %}
+    <p> Area:{{area}}</p>
+    {% endif %}
+  </center>
+    </div>
+  </div> 
+  </main>
+</body>
+</html>

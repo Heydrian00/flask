@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styleupper.css')}}">
+    <center><title>Convert to Uppercase</title>
+
+</head>
+<body>
+    <main>
+        <div class="upper">
+    <h1>String Converter</h1>
+    <br>
+    <div class="process">
+    <form action="/Uppercase" method="post">
+        <label for="inputString">Enter a string:</label>
+        <br>
+        <input type="text" id="inputString" name="inputString">
+        <br>
+        <input type="submit" value="Convert">
+    </form>
+
+    {% if result %}
+    <p>Converted String: {{ result }}</p>
+    {% endif %}
+    </center>
+        </div>
+    </div>
+    </main>
+</body>
+</html>

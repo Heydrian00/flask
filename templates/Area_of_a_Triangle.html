@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styletriangle.css')}}">
+    <center><title>Area of a Triangle</title>
+    
+
+</head>
+<body>
+    <main>
+    <div class="triangle">
+    <h1>Area of a Triangle</h1>
+    <div class="process">
+    <form action='/Area_of_a_Triangle', method='post'>
+        <div class="l1">
+        <label><for="base">Enter the base of a Triangle:</label>
+        <br> 
+        </div>
+        <input type="number" step="any" name="base" required>
+        <br>
+        <div class="l2">
+        <label><for="height">Enter the height of a Triangle:</label>
+        <br>
+        </div>
+        <input type="number" step="any" name="height" required>
+        <br>
+        <button type="submit">Calculate</button>
+        <br>
+    </form>
+
+    {% if base and height %}
+    <p>Area:{{area}}</p>
+    {% endif %}
+   </center>
+    </div>
+    </div>
+    </main>
+</body>
+</html>
