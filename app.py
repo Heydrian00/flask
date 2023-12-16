@@ -24,8 +24,7 @@ import math
 def Circle_area(radius):
         
         if radius < 0:
-            print("Radius cannot be negative.")
-            return None
+            return 'Radius cannot be negative'
             
         area = math.pi*radius**2
         return area
@@ -43,7 +42,7 @@ def Area_of_a_Circle():
 def Triangle_area(base, height):
     
     if base < 0 or height < 0:
-        return 'Base and Height cannot be negative.'
+        return 'Base and Height cannot be negative'
 
     area = (base * height) / 2
     return round(area, 2)
